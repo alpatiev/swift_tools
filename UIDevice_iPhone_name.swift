@@ -1,6 +1,6 @@
 import UIKit
 
-// MARK: - UIDevice + iPhoneModelEnum + iPhoneModelText
+// MARK: - UIDevice + iPhoneModelEnum + iPhoneModelText + isFramelessDevice
 
 public extension UIDevice {
     enum IPhoneModel: String {
@@ -108,5 +108,36 @@ public extension UIDevice {
     /// Compatible only with iPhones.
     var iPhoneModelText: String {
         iPhoneModelEnum.rawValue.replacingOccurrences(of: "_", with: " ")
+    }
+
+    /// Returns true for devices since iPhone X,
+    /// but excluded iPhone SE of 1-3 gen.
+    /// And false otherwise. For all iphones below X.
+    var isFramelessDevice: Bool {
+        switch iPhoneModelEnum {
+        // List of rectangle-framed devices.
+        // Returns false in that case.
+        case    .iPhone_4,
+                .iPhone_4s,
+                .iPhone_5,
+                .iPhone_5c,
+                .iPhone_5s,
+                .iPhone_6,
+                .iPhone_6_Plus,
+                .iPhone_6s,
+                .iPhone_6s_Plus,
+                .iPhone_7,
+                .iPhone_7_Plus,
+                .iPhone_SE_1st_Generation,
+                .iPhone_8,
+                .iPhone_8_Plus,
+                .iPhone_SE_2nd_Generation,
+                .iPhone_SE_3rd_Generation:
+            return false
+        // New iPhones most likely will not
+        // have old screen designs. Except SE 4, 5, 6..
+        default:
+            return true
+        }
     }
 }
