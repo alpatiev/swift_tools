@@ -10,3 +10,5 @@ let modelName: String = UIDevice().iPhoneModelText
 let isFrameless: Bool = UIDevice().isFramelessDevice
 ```
 
+## 2. iPhone_iPad_screen_sizes.md
+Two tables that represents all screens sizes up to 2023.
