@@ -1,4 +1,5 @@
-# Table of contents. Contains name of the file and usage description.
+# About
+Tools and extensions for developing iOS/MacOS/WatchOS applications.
 
 ## 1. UIDevice_iPhone_name.swift
 Simple snipped that allows you get current iPhone name.
