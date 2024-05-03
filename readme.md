@@ -37,3 +37,6 @@ Default usage:
 ```
 Log.print(.someService1, .warning("Something suspicious!"))
 ```
+
+## 4. QuickActionHelper.swift
+Simple class to handle Quick Actions from the iOS manu.
