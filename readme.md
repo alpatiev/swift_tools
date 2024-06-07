@@ -40,3 +40,10 @@ Log.print(.someService1, .warning("Something suspicious!"))
 
 ## 4. QuickActionHelper.swift
 Simple class to handle Quick Actions from the iOS manu.
+
+## 4. BitOps.swift
+A grain of bitwise operations in swift,
+it will be cool to compare native methods and DIY ones. Examples:
+```
+swapxor(&a, &b) 
+```
